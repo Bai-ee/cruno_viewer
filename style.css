@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: #648A2A;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100vh;
+    max-height: 100vh;
+}
+
+#search-input {
+    width: 520px;
+    height: 50px;
+    padding: 20px;
+    padding-left: 50px;
+    line-height: 26px;
+    font-size: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.578);
+    color: black;
+    backdrop-filter: blur(20px);
+    border-radius: 50px;
+    border: solid 10px #648A2A;
+    max-width: 70vw;
+    text-align: center;
+}
+
+.stageBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    position: absolute;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.stageCont {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    position: absolute;
+    z-index: 999999999;
+    pointer-events: auto;
+}
+
+#nft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 30px;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    justify-items: center; /* Center content within the items */
+    height: calc(100vh - 100px); /* Adjust height to fit viewport, minus search input height */
+}
+
+.loader {
+    display: inline-block;
+    width: 20%;
+    height: 20%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #648A2A;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+}
+
+.nft-card {
+    flex: 1 1 auto;
+    overflow: hidden;
+    background: #648A2A !important;
+    min-height: 210px;
+    max-height: 250px;
+    font-size: 12px;
+}
+
+.nft-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.nft-card .content {
+    padding: 10px;
+    width: 100%;
+    height: auto;
+}
