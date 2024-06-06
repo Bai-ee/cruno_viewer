@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
 async function loadCollection() {
     const items = [];
-    for (let i = 1; i <= 200; i++) {
+    for (let i = 1; i <= 215; i++) {
         items.push({ name: `Cruno #${i}` });
     }
 
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let matchFound = false;
 
         // Prevent input of numbers greater than 222
-        if (!isNaN(searchNumber) && (searchNumber < 1 || searchNumber > 222)) {
+        if (!isNaN(searchNumber) && (searchNumber < 1 || searchNumber > 215)) {
             searchInput.value = '';
             return;
         }
